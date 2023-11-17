@@ -5,4 +5,11 @@
 }
 body {
     background-color: #f6f8fc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
+.material-symbols-outlined {
+  font-size: 17px;
+  }
