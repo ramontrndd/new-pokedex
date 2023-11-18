@@ -1,58 +1,55 @@
 #stats {
- 
-    font-size: 0.95rem;
-    
-
+  font-size: 0.95rem;
 }
 
 .stat-row {
-    display: flex;
-    width: 75vw;
+  display: flex;
+  width: 23vw;
 }
 
-.stat-desc, .stat-number {
-    width: 13%;
-    
+.stat-desc,
+.stat-number {
+  width: 13%;
 }
 
 .stat-desc {
-    font-size: .8rem;
-    color: rgb(73, 208, 176);
-    font-weight: bold;
-    text-align: right;
-    margin-right: 0.6rem;
-    transition: color 0.5s ease-in-out;
-    
+  font-size: 0.8rem;
+  color: rgb(73, 208, 176);
+  font-weight: bold;
+  text-align: right;
+  margin-right: 0.6rem;
+  transition: color 0.5s ease-in-out;
 }
 
 .stat-number {
-    border-left: 1px solid gray;
-    text-align: right;
-   
+  border-left: 2px solid gray;
+  text-align: right;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  font-size: .7rem;
 }
 
 .stat-bar {
-    width: 76%;
-    display: flex;
-    align-items: center;
-    padding-left: 0.6rem;
+  width: 76%;
+  display: flex;
+  align-items: center;
+  padding-left: 0.6rem;
 }
 
 .bar-outer {
-    background-color: rgba(73, 208, 177, 0.3);
-    display: flex;
-    width: 100%;
-    height: 0.3rem;
-    border-radius: 4px;
-    transition: 0.5s ease-in-out;
+  background-color: rgba(73, 208, 177, 0.3);
+  display: flex;
+  width: 100%;
+  height: 0.3rem;
+  border-radius: 4px;
+  transition: 0.5s ease-in-out;
 }
 
 .bar-inner {
-    background-color:   rgb(73, 208, 176);
-    border-radius: 4px;
-    transition: 0.5s ease-in-out;
+  background-color: rgb(73, 208, 176);
+  border-radius: 4px;
+  transition: 0.5s ease-in-out;
 }
 
 #base-stats {
-    transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
 }

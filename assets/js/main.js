@@ -7,6 +7,12 @@ const pokemonWeight = document.querySelector("#pkmn-weight");
 const pokemonHeight = document.querySelector("#pkmn-height");
 const pkmnAbility = document.querySelector(".pkmn-ability");
 const pkmnAbilitys = document.querySelector(".pokemon-ability");
+const statsNumber = document.querySelectorAll(".stat-number");
+const barInner = document.querySelectorAll(".bar-inner");
+const barOuter = document.querySelectorAll(".bar-outer");
+const themeColor = document.querySelector(".pokemon");
+const textDesc = document.querySelector('#base-stats');
+const statDesc = document.querySelectorAll(".stat-desc");
 
 const typeColors = {
   rock: [182, 158, 49],
@@ -47,8 +53,13 @@ const fetchApi = async (pokemonName) => {
 searchElements.forEach((search) => {
   search.addEventListener("change", async (event) => {
     const pokemonData = await fetchApi(event.target.value);
-    if (!pokemonData) alert(" Pokemon não existe");
-    console.log(pokemonData);
+    if (!pokemonData) {
+      alert(" Pokemon não existe");
+      return;
+    }
+
+    // Set color UI Theme
+    const mainColor = typeColors[pokemonData.types[0].type.name];
 
     // Change Pokemon ID
     number.innerHTML = "#" + pokemonData.id.toString().padStart(3, "0");
@@ -81,5 +92,21 @@ searchElements.forEach((search) => {
       newAbility.classList.add("pokemon-ability");
       pkmnAbilitys.appendChild(newAbility);
     });
+
+    // Update Stats
+
+    pokemonData.stats.forEach((s, i) => {
+      statsNumber[i].innerHTML = s.base_stat.toString().padStart(3, "0");
+      barInner[i].style.width = `${s.base_stat}%`;
+      barInner[i].style.backgroundColor = `rgb(${mainColor[0]},${mainColor[1]},${mainColor[2]})`;
+      barOuter[i].style.backgroundColor = `rgba(${mainColor[0]},${mainColor[1]},${mainColor[2]},.3)`;
+      statDesc[i].style.color = `rgb(${mainColor[0]},${mainColor[1]},${mainColor[2]})`;
+          textDesc.style.color = `rgb(${mainColor[0]},${mainColor[1]},${mainColor[2]})`;
+    themeColor.style.backgroundColor = `rgb(${mainColor[0]},${mainColor[1]},${mainColor[2]})`;
+  
+
+    });
+   
+
   });
 });
