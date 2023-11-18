@@ -1,5 +1,5 @@
 #stats {
-    width: 90%;
+ 
     font-size: 0.95rem;
     
 
@@ -7,7 +7,7 @@
 
 .stat-row {
     display: flex;
-    width: 25vw;
+    width: 90vw;
 }
 
 .stat-desc, .stat-number {
