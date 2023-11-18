@@ -7,7 +7,7 @@
 
 .stat-row {
     display: flex;
-    width: 90vw;
+    width: 75vw;
 }
 
 .stat-desc, .stat-number {
@@ -16,7 +16,8 @@
 }
 
 .stat-desc {
-    color:  rgb(73, 208, 176);
+    font-size: .8rem;
+    color: rgb(73, 208, 176);
     font-weight: bold;
     text-align: right;
     margin-right: 0.6rem;

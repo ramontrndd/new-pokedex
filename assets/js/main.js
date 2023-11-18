@@ -3,8 +3,11 @@ const number = document.querySelector("#number");
 const pokemonImg = document.querySelector(".pokemon-image");
 const type = document.querySelector(".type");
 const types = document.querySelector(".types");
-const pokemonWeight = document.querySelector('#pkmn-weight')
-const pokemonHeight = document.querySelector('#pkmn-height')
+const pokemonWeight = document.querySelector("#pkmn-weight");
+const pokemonHeight = document.querySelector("#pkmn-height");
+const pkmnAbility = document.querySelector(".pkmn-ability");
+const pkmnAbilitys = document.querySelector(".pokemon-ability");
+
 const typeColors = {
   rock: [182, 158, 49],
   ghost: [112, 85, 155],
@@ -47,7 +50,7 @@ searchElements.forEach((search) => {
     if (!pokemonData) alert(" Pokemon não existe");
     console.log(pokemonData);
 
-    // Change Pokemon ID 
+    // Change Pokemon ID
     number.innerHTML = "#" + pokemonData.id.toString().padStart(3, "0");
     // Change Pokemons Img
     pokemonImg.src = pokemonData.sprites.other.dream_world.front_default;
@@ -65,12 +68,18 @@ searchElements.forEach((search) => {
     const weightInGrams = parseInt(pokemonData.weight, 10);
     const weightInKilograms = weightInGrams / 10;
     pokemonWeight.innerHTML = `${weightInKilograms} Kg`;
-    // Change Pokemon Height 
+    // Change Pokemon Height
     const heightconverter = parseInt(pokemonData.height, 10);
     const heightformillimeter = heightconverter / 10;
-    pokemonHeight.innerHTML = `${heightformillimeter} M`
-    // Change Pokemon Ability 
+    pokemonHeight.innerHTML = `${heightformillimeter} M`;
+    // Change Pokemon Ability
 
-
+    pkmnAbilitys.innerHTML = "";
+    const pkmnAbility = pokemonData.abilities.forEach((a) => {
+      let newAbility = document.createElement("span");
+      newAbility.innerHTML = a.ability.name;
+      newAbility.classList.add("pokemon-ability");
+      pkmnAbilitys.appendChild(newAbility);
+    });
   });
 });
