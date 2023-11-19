@@ -22,7 +22,45 @@
   .pokemon-search {
     transform: translateX(0%);
   }
+  .pokemon-logo__name,
+  .pokemon-logo__ball {
+    display: none;
+  }
 }
-.pokemon-logo__name, .pokemon-logo__ball {
-  display: none;
+
+@media screen and (min-width: 360px) and (max-width: 430px) {
+  .pokemon {
+    width: 345px;
+  }
+  .stat-row {
+    width: 75vw;
+  }
+  .stat-desc,
+  .stat-number {
+    width: 10%;
+  }
+  .stat-number {
+    font-size: 0.6rem;
+  }
+  .pokemon-about__description {
+    width: 55vw;
+  }
+  .pokemon-about {
+    width: 60vw;
+  }
+  .pokemon-search {
+    transform: translateX(0%);
+  }
+  .header-container {
+    display: flex;
+    padding: 25px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pokemon-logo__ball {
+    transform: translateY(12px);
+  }
+  .pokemon-logo__name {
+    transform: translateY(-20px);
+  }
 }
