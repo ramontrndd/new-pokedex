@@ -1,0 +1,28 @@
+@media screen and (min-width: 280px) and (max-width: 359px) {
+  .stat-row {
+    width: 84vw;
+  }
+  .stat-desc,
+  .stat-number {
+    width: 10%;
+  }
+  .stat-desc {
+    margin-right: 0.96rem;
+  }
+
+  .stat-number {
+    font-size: 0.5rem;
+  }
+  .pokemon-about {
+    width: 80vw;
+  }
+  .pokemon-about__description {
+    width: 75vw;
+  }
+  .pokemon-search {
+    transform: translateX(0%);
+  }
+}
+.pokemon-logo__name, .pokemon-logo__ball {
+  display: none;
+}
