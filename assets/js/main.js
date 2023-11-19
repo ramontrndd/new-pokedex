@@ -11,8 +11,9 @@ const statsNumber = document.querySelectorAll(".stat-number");
 const barInner = document.querySelectorAll(".bar-inner");
 const barOuter = document.querySelectorAll(".bar-outer");
 const themeColor = document.querySelector(".pokemon");
-const textDesc = document.querySelector('#base-stats');
+const textDesc = document.querySelector("#base-stats");
 const statDesc = document.querySelectorAll(".stat-desc");
+const pkmnName = document.querySelector("#name");
 
 const typeColors = {
   rock: [182, 158, 49],
@@ -57,7 +58,8 @@ searchElements.forEach((search) => {
       alert(" Pokemon não existe");
       return;
     }
-
+    pkmnName.innerHTML = pokemonData.name;
+    
     // Set color UI Theme
     const mainColor = typeColors[pokemonData.types[0].type.name];
 
@@ -98,15 +100,17 @@ searchElements.forEach((search) => {
     pokemonData.stats.forEach((s, i) => {
       statsNumber[i].innerHTML = s.base_stat.toString().padStart(3, "0");
       barInner[i].style.width = `${s.base_stat}%`;
-      barInner[i].style.backgroundColor = `rgb(${mainColor[0]},${mainColor[1]},${mainColor[2]})`;
-      barOuter[i].style.backgroundColor = `rgba(${mainColor[0]},${mainColor[1]},${mainColor[2]},.3)`;
-      statDesc[i].style.color = `rgb(${mainColor[0]},${mainColor[1]},${mainColor[2]})`;
-          textDesc.style.color = `rgb(${mainColor[0]},${mainColor[1]},${mainColor[2]})`;
-    themeColor.style.backgroundColor = `rgb(${mainColor[0]},${mainColor[1]},${mainColor[2]})`;
-  
-
+      barInner[
+        i
+      ].style.backgroundColor = `rgb(${mainColor[0]},${mainColor[1]},${mainColor[2]})`;
+      barOuter[
+        i
+      ].style.backgroundColor = `rgba(${mainColor[0]},${mainColor[1]},${mainColor[2]},.3)`;
+      statDesc[
+        i
+      ].style.color = `rgb(${mainColor[0]},${mainColor[1]},${mainColor[2]})`;
+      textDesc.style.color = `rgb(${mainColor[0]},${mainColor[1]},${mainColor[2]})`;
+      themeColor.style.backgroundColor = `rgb(${mainColor[0]},${mainColor[1]},${mainColor[2]})`;
     });
-   
-
   });
 });

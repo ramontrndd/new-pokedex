@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pokedex</title>
+    <title>Pokedex With HTML, CSS , JavaScript</title>
     <!--Material Icons-->
     <link
       rel="stylesheet"
@@ -36,112 +36,124 @@
   </head>
 
   <body>
-    <div class="pokemon">
-      <div class="top">
-        <div class="pokemon-header">
-          <input type="text" class="pokemon-search" value="Bulbasaur" />
-          <span id="number">#001</span>
+    <header>
+      <div class="header-container">
+        <img
+          class="pokemon-logo__name"
+          src="assets/images/pokemon-name.png"
+          alt=""
+        />
+       <input type="text" class="pokemon-search" value="search by name or id">
+        <img
+          class="pokemon-logo__ball"
+          src="assets/images/pokemon-ball.png"
+          alt=""
+        />
+      </div>
+    </header>
+    <main>
+      <div class="pokemon">
+        <div class="top">
+          <div class="pokemon-top">
+            <span id="name">Bulbasaur</span>
+            <span id="number">#001</span>
+          </div>
+          <div class="poke-image-placeholder">
+            <img
+              class="pokemon-image"
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+              alt="pokemon-ilustratation"
+            />
+          </div>
         </div>
-        <div class="poke-image-placeholder">
-          <img
-            class="pokemon-image"
-            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
-            alt="pokemon-ilustratation"
-          />
+        <div class="pokemon-stats">
+          <div class="types">
+            <span style="background-color: rgb(73, 208, 176)" class="type">
+              Grass
+            </span>
+            <span style="background-color: rgb(164, 62, 158)" class="type">
+              Poison
+            </span>
+          </div>
+          <div class="pokemon-about__description">
+            <p>Weight</p>
+            <p>Height</p>
+            <p>Ability</p>
+          </div>
+          <div class="pokemon-about">
+            <div class="pokemon-weight">
+              <span class="material-symbols-outlined">weight</span>
+              <p style="font-weight: bold" id="pkmn-weight">6.6kg</p>
+            </div>
+            <div class="pokemon-ruler">
+              <span class="material-symbols-outlined"> design_services </span>
+              <p style="font-weight: bold" id="pkmn-height">0.7 M</p>
+            </div>
+            <div class="pokemon-ability">
+              <span class="pkmn-ability">overgrow</span>
+              <span class="pkmn-ability">chlorophyll</span>
+            </div>
+          </div>
+          <h5 id="base-stats">Base Stats</h5>
+          <div id="stats">
+            <div class="stat-row">
+              <div class="stat-desc">HP</div>
+              <div class="stat-number">045</div>
+              <div class="stat-bar">
+                <div class="bar-outer">
+                  <div class="bar-inner" style="width: 45%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-desc">ATK</div>
+              <div class="stat-number">049</div>
+              <div class="stat-bar">
+                <div class="bar-outer">
+                  <div class="bar-inner" style="width: 49%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-desc">DEF</div>
+              <div class="stat-number">049</div>
+              <div class="stat-bar">
+                <div class="bar-outer">
+                  <div class="bar-inner" style="width: 49%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-desc">SATK</div>
+              <div class="stat-number">065</div>
+              <div class="stat-bar">
+                <div class="bar-outer">
+                  <div class="bar-inner" style="width: 65%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-desc">SDEF</div>
+              <div class="stat-number">065</div>
+              <div class="stat-bar">
+                <div class="bar-outer">
+                  <div class="bar-inner" style="width: 65%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="stat-row">
+              <div class="stat-desc">SPD</div>
+              <div class="stat-number">045</div>
+              <div class="stat-bar">
+                <div class="bar-outer">
+                  <div class="bar-inner" style="width: 45%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="pokemon-stats">
-        <div class="types">
-          <span style="background-color: rgb(73, 208, 176)" class="type">
-            Grass
-          </span>
-          <span style="background-color: rgb(164, 62, 158)" class="type">
-            Poison
-          </span>
-        </div>
-
-        <div class="pokemon-about__description">
-          <p>Weight</p>
-          <p>Height</p>
-          <p>Ability</p>
-        </div>
-
-        <div class="pokemon-about">
-          <div class="pokemon-weight">
-            <span class="material-symbols-outlined">weight</span>
-            <p style="font-weight: bold" id="pkmn-weight">6.6kg</p>
-          </div>
-          <div class="pokemon-ruler">
-            <span class="material-symbols-outlined"> design_services </span>
-            <p style="font-weight: bold" id="pkmn-height">0.7 M</p>
-          </div>
-          <div class="pokemon-ability">
-            <span class="pkmn-ability">overgrow</span>
-            <span class="pkmn-ability">chlorophyll</span>
-          </div>
-        </div>
-
-        <h5 id="base-stats">Base Stats</h5>
-
-        <div id="stats">
-          <div class="stat-row">
-            <div class="stat-desc">HP</div>
-            <div class="stat-number">045</div>
-            <div class="stat-bar">
-              <div class="bar-outer">
-                <div class="bar-inner" style="width: 45%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="stat-row">
-            <div class="stat-desc">ATK</div>
-            <div class="stat-number">049</div>
-            <div class="stat-bar">
-              <div class="bar-outer">
-                <div class="bar-inner" style="width: 49%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="stat-row">
-            <div class="stat-desc">DEF</div>
-            <div class="stat-number">049</div>
-            <div class="stat-bar">
-              <div class="bar-outer">
-                <div class="bar-inner" style="width: 49%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="stat-row">
-            <div class="stat-desc">SATK</div>
-            <div class="stat-number">065</div>
-            <div class="stat-bar">
-              <div class="bar-outer">
-                <div class="bar-inner" style="width: 65%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="stat-row">
-            <div class="stat-desc">SDEF</div>
-            <div class="stat-number">065</div>
-            <div class="stat-bar">
-              <div class="bar-outer">
-                <div class="bar-inner" style="width: 65%"></div>
-              </div>
-            </div>
-          </div>
-          <div class="stat-row">
-            <div class="stat-desc">SPD</div>
-            <div class="stat-number">045</div>
-            <div class="stat-bar">
-              <div class="bar-outer">
-                <div class="bar-inner" style="width: 45%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </main>
     <!-- JS -->
     <script src="/assets/js/main.js"></script>
   </body>

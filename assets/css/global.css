@@ -1,15 +1,32 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
-    background-color: #f6f8fc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  background-color: #f6f8fc;
+  height: 100vh;
 }
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
 .material-symbols-outlined {
   font-size: 17px;
-  }
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15px;
+  
+}
+.pokemon-logo__name {
+  width: 190px;
+  height: 70px;
+}
+.pokemon-logo__ball {
+  width: 70px;
+  height: 70px;
+}
