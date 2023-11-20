@@ -121,14 +121,14 @@ p {
 .pokemon-about {
   display: flex;
   justify-content: space-between;
-  width: 20vw;
+  width: 16vw;
 }
 .pokemon-about__description {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 20vw;
+  width: 15vw;
   font-family: "Teko", sans-serif;
   margin-top: 10px;
 }

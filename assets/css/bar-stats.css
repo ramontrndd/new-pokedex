@@ -5,12 +5,12 @@
 
 .stat-row {
   display: flex;
-  width: 20vw;
+  width: 18vw;
 }
 
 .stat-desc,
 .stat-number {
-  width: 10%;
+  width: 16%;
 }
 
 .stat-desc {
