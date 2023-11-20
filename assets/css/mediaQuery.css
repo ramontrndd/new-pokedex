@@ -200,3 +200,34 @@
     width: 24vw;
   }
 }
+@media screen and (min-width: 1920px) and (max-width: 2560px){
+  .pokemon-image {
+    transform: translateY(4.5rem);
+  }
+  .pokemon-about__description {
+    width: 9vw;
+  }
+  .pokemon-about {
+    width: 9.5vw;
+  }
+  .stat-row {
+    width: 13vw;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .pokemon-image {
+    height: 200px;
+    width: 200px;
+    transform: translateY(2.5rem);
+  }
+  .pokemon-about__description {
+    width: 8vw;
+  }
+  .pokemon-about {
+    width: 9.5vw;
+  }
+  .stat-row {
+    width: 10vw;
+  }
+}
+
