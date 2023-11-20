@@ -153,6 +153,8 @@ p {
   font-size: 0.8rem;
   font-weight: bold;
   text-transform: capitalize;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  text-transform: uppercase;
 }
 .pokemon-logo__ball {
   transform: translate(10px, 5px);

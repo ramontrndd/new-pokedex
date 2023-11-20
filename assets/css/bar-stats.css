@@ -20,6 +20,7 @@
   text-align: right;
   margin-right: 0.6rem;
   transition: color 0.5s ease-in-out;
+  font-family: 'Oswald', sans-serif;
 }
 
 .stat-number {

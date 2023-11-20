@@ -51,6 +51,26 @@ const fetchApi = async (pokemonName) => {
   return false;
 };
 
+function searchPokemon(query) {
+  if (query.length > 2) {
+    fetch(
+      `https://pokeapi.co/api/v2/pokemon?limit=650&offset=0&species.name=${query}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        const datalist = document.getElementById("pokemonList");
+        datalist.innerHTML = "";
+
+        data.results.forEach((pokemon) => {
+          const option = document.createElement("option");
+          option.value = pokemon.name;
+          datalist.appendChild(option);
+        });
+      })
+      .catch((error) => console.error("Error fetching Pokémon data:", error));
+  }
+}
+
 searchElements.forEach((search) => {
   search.addEventListener("change", async (event) => {
     const pokemonData = await fetchApi(event.target.value);
@@ -59,7 +79,7 @@ searchElements.forEach((search) => {
       return;
     }
     pkmnName.innerHTML = pokemonData.name;
-    
+
     // Set color UI Theme
     const mainColor = typeColors[pokemonData.types[0].type.name];
 

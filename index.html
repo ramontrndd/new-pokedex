@@ -29,26 +29,40 @@
       href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
     <!--  CSS -->
     <link rel="stylesheet" href="assets/css/global.css" />
     <link rel="stylesheet" href="assets/css/pokedex.css" />
     <link rel="stylesheet" href="assets/css/bar-stats.css" />
-    <link rel="stylesheet" href="assets/css/mediaQuery.css">
+    <link rel="stylesheet" href="assets/css/mediaQuery.css" media="screen" />
   </head>
-
   <body>
     <header>
       <div class="header-container">
         <img
           class="pokemon-logo__name"
           src="assets/images/pokemon-name.png"
-          alt=""
+          alt="pokémon imagem"
         />
-       <input type="text" class="pokemon-search" value="search by name or id">
+        <label for="pokemonSearch"></label>
+        <input
+          value="Search here"
+          type="text"
+          id="pokemonSearch"
+          class="pokemon-search"
+          list="pokemonList"
+          oninput="searchPokemon(this.value)"
+        />
+        <datalist id="pokemonList"></datalist>
         <img
           class="pokemon-logo__ball"
           src="assets/images/pokemon-ball.png"
-          alt=""
+          alt="pokémon name logo"
         />
       </div>
     </header>
