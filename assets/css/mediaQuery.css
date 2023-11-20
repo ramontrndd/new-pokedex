@@ -22,6 +22,9 @@
   .pokemon-search {
     transform: translateX(0%);
   }
+  .pokemon-search {
+    width: 250px;
+  }
 }
 @media screen and (min-width: 360px) and (max-width: 375px) {
   .pokemon {
