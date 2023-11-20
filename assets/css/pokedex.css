@@ -8,6 +8,12 @@
   padding: 0.3rem;
   height: auto;
 }
+.header-container {
+  display: flex;
+  padding: 5px;
+  flex-direction: column;
+  align-items: center;
+}
 .pokemon-header {
   display: flex;
   justify-content: space-between;
@@ -28,7 +34,6 @@
   border-radius: 10px;
   font-family: 'Teko',sans-serif;
   font-size: 2rem;
-  transform: translateX(-20%);
   padding: 10px;
   font-weight: bold;
   box-shadow:  1px 1px 20px 1px rgba(0, 0, 0, 0.24);
@@ -54,8 +59,8 @@
   justify-content: center;
 }
 .pokemon-image {
-  height: 130px;
-  width: 130px;
+  height: 150px;
+  width: 150px;
   transform: translateY(0.5rem);
 }
 .top {
@@ -148,4 +153,13 @@ p {
   font-size: 0.8rem;
   font-weight: bold;
   text-transform: capitalize;
+}
+.pokemon-logo__ball {
+  transform: translate(10px, 5px);
+  width: 40px;
+  height: 40px;
+}
+.pokemon-logo__name {
+  width: 278px;
+  height: 100px;
 }

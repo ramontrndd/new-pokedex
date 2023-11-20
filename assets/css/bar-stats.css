@@ -5,12 +5,12 @@
 
 .stat-row {
   display: flex;
-  width: 23vw;
+  width: 20vw;
 }
 
 .stat-desc,
 .stat-number {
-  width: 13%;
+  width: 10%;
 }
 
 .stat-desc {
@@ -25,8 +25,8 @@
 .stat-number {
   border-left: 2px solid gray;
   text-align: right;
-  font-family: 'Kdam Thmor Pro', sans-serif;
-  font-size: .7rem;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 0.7rem;
 }
 
 .stat-bar {
