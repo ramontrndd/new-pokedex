@@ -36,6 +36,12 @@ const typeColors = {
   dragon: [112, 55, 255],
 };
 
+function limparInput() {
+  const inputElement = document.querySelector("#pokemonSearch");
+  inputElement.value = "";
+
+}
+
 const fetchApi = async (pokemonName) => {
   pokemonNameApi = pokemonName.split(" ").join("-");
 
